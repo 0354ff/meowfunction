@@ -17,7 +17,7 @@ $$
 y(t) = \cos(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
 $$
 
-$$ интервал:  
+$$ Интервал:  
 
 t \in [0,\ 12\pi]
  $$
@@ -27,7 +27,7 @@ t \in [0,\ 12\pi]
 
 
 k = st.slider(
-    "max значение тешки: t = k·π",    
+    "Max значение тешки:",    
     min_value=1, max_value=20,     
     value=12                       
 )
@@ -44,7 +44,7 @@ color = st.selectbox(
     index=1
 ) 
 
-sin_power = st.slider("Степень синуса (sin(t/12)^n)", min_value=1, max_value=50, value=5)
+sin_power = st.slider("Степень синуса:", min_value=1, max_value=50, value=5)
 
 
 t = np.linspace(0, k * np.pi, num_points)
