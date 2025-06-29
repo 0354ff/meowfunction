@@ -12,10 +12,10 @@ $$
 y(t) = \cos(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
 $$
 
-интервал:  
-\[
-t \in [0,\ 12\pi]
-\]""")
+**интервал:**  
+
+$$ t \in [0,\ 12\pi] $$
+""")
 
 
 k = st.slider(
