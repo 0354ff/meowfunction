@@ -41,7 +41,7 @@ num_points = st.slider(
 color = st.selectbox(
     "Цвет кривой",
     options=["purple", "blue", "red", "green", "black", "orange", "pink",],
-    index=0
+    index=1
 ) 
 
 sin_power = st.slider("Степень синуса (sin(t/12)^n)", min_value=1, max_value=50, value=5)
