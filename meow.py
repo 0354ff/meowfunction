@@ -7,7 +7,7 @@ st.title("🦋 мейд бай кувшинка")
 import streamlit as st
 
 st.markdown(r"""
- ### формула єтого мелелика:
+ ### формула єтого метелика:
 
 $$
 x(t) = \sin(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
