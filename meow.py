@@ -3,18 +3,14 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 st.title("🦋 мейд бай кувшинка")
-st.markdown(r"""###формула этого метелика
-    $$
-x(t) = \sin(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
-$$
+import streamlit as st
+
+st.markdown(r"""
+### Простая формула:
 
 $$
-y(t) = \cos(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
+E = mc^2
 $$
-
-**интервал:**  
-
-$$ t \in [0,\ 12\pi] $$
 """)
 
 
