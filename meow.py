@@ -3,6 +3,19 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 st.title("🦋 мейд бай кувшинка")
+st.markdown(r"""###формула этого метелика
+    $$
+x(t) = \sin(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
+$$
+
+$$
+y(t) = \cos(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
+$$
+
+интервал:  
+\[
+t \in [0,\ 12\pi]
+\]""")
 
 
 k = st.slider(
