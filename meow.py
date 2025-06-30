@@ -75,7 +75,7 @@ elif figure == "Поверхности Дини":
    $$ 
 
    $$ 
-   z(t) = b\cos(v) + \log_{10}\left(\tan(\frac{v}{2}\right)\right) + b \cdot u
+   z(t) = b\cos(v) + \log_{10}\left(\tan(\frac{v}{2})\right) + b \cdot u
    $$ 
 
    $$ 
