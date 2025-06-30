@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
+from mpl_toolkits.mplot3d import Axes3D
 
 st.title("мейд бай кувшинка") 
 
@@ -9,82 +10,82 @@ figure = st.selectbox("Выбрать кривую", ["Кривая бабочк
 import streamlit as st
 
 if figure == "Кривая бабочки":
- st.markdown(r"""
- ### формула єтого метелика:
+   st.markdown(r"""
+   ### формула єтого метелика:
 
-$$
-x(t) = \sin(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
-$$
+   $$
+   x(t) = \sin(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
+   $$
 
-$$
-y(t) = \cos(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
-$$
+   $$
+   y(t) = \cos(t) \cdot \left(e^{\cos(t)} - 2\cos(4t) + \sin^5\left(\frac{t}{12}\right)\right)
+   $$
 
-$$ Интервал:  
+   $$ Интервал:  
 
-t \in [0;\ 12\pi]
- $$
-""")
+   t \in [0;\ 12\pi]
+   $$
+   """)
 
-k = st.slider(
+   k = st.slider(
     "Max значение тешки:",    
     min_value=1, max_value=20,     
     value=12                       
-)
+   )
 
-num_points = st.slider(
+   num_points = st.slider(
     "Количество точек (точность)",
     min_value=500, max_value=3000,
     value=1000, step=100
-)
+   )
 
-color = st.selectbox(
+   color = st.selectbox(
     "Цвет кривой",
     options=["purple", "blue", "red", "green", "black", "orange", "pink",],
     index=1
-) 
+   ) 
 
-sin_power = st.slider("Степень синуса:", min_value=1, max_value=50, value=5)
+   sin_power = st.slider("Степень синуса:", min_value=1, max_value=50, value=5)
 
 
-t = np.linspace(0, k * np.pi, num_points)
+   t = np.linspace(0, k * np.pi, num_points)
 
-expression = np.exp(np.cos(t)) - 2 * np.cos(4*t) + np.sin(t/12)**sin_power
-x = np.cos(t) * expression
-y = np.sin(t) * expression 
+   expression = np.exp(np.cos(t)) - 2 * np.cos(4*t) + np.sin(t/12)**sin_power
+   x = np.cos(t) * expression
+   y = np.sin(t) * expression 
 
-fig, ax = plt.subplots(figsize=(8, 8))
-ax.plot(y, x, color = color)
-ax.set_title("Кривая бабочки")
-ax.axis('equal')
-ax.grid(True)
+   fig, ax = plt.subplots(figsize=(8, 8))
+   ax.plot(y, x, color = color)
+   ax.set_title("Кривая бабочки")
+   ax.axis('equal')
+   ax.grid(True)
 
-st.pyplot(fig)
+   st.pyplot(fig) 
+   pass
+
+elif figure == "Поверхности Дини":
+    
+   st.markdown(r"""### формула:
  
-from mpl_toolkits.mplot3d import Axes3D
+   $$
+   x(t) = \cos(u) \cdot \sin(v)
+   $$
 
-if figure == "Поверхности Дини":
- st.markdown(r"""### формула:
- 
-$$
-x(t) = \cos(u) \cdot \sin(v)
-$$
+   $$
+   y(t) = b\sin(u) \cdot b\sin(v)
+   $$ 
 
-$$
-y(t) = bsin(u) * bsin(v)
-$$ 
+   $$ 
+   z(t) = b\cos(v) + \log10(\tan\left(\frac{v}{2}\right)\right) + bu
+   $$ 
 
-$$ 
-z(t) = bcos(v) + log10(\tan\left(\frac{v}{2}\right)\right) + bu
-$$ 
+   $$ 
+   u \in [0;\ 4\pi], v \in [0,001;\ 2]
+   $$ 
 
-$$ 
-u \in [0;\ 4\pi], v \in [0,001;\ 2]
-$$ 
+   """)
 
-""")
-
- cmap = st.sidebar.selectbox ("Цвет",
+   cmap = st.sidebar.selectbox ("Цвет",
     options = ["plasma", "viridis", "inferno", "coolwarm"], 
     index = 0)
 
