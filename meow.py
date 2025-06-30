@@ -86,7 +86,7 @@ elif figure == "Поверхности Дини":
 
    cmap = st.sidebar.selectbox ("Цвет",
     options = ["plasma", "viridis", "inferno", "coolwarm"], 
-    index = 0)
+    index = 1)
 
 
    u_max = st.sidebar.slider("Максимум u", np.pi, 10 * np.pi, 4 * np.pi, step=np.pi)  
